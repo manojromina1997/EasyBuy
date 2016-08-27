@@ -16,6 +16,10 @@ class Connector extends Controller
     {
         return view('index');
     }
+     public function Contact()
+    {
+        return view('others.contact');
+    }
     public function AC()
     {
         return view('categories.appliances.ac',array('name' => 'Air Conditoner'));

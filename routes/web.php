@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']],function() {
 Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
+Route::get('/contact', [ 'as'=>'contact', 'uses'=>'ContactController@getContact']);
+Route::post('/contact', [ 'uses'=>'ContactController@postContact']);
 Route::get('/ac', [ 'as'=>'ac', 'uses'=>'Connector@AC']);
 Route::get('/homeentertainment', [ 'as'=>'homeentertainment', 'uses'=>'Connector@HomeEntertainment']);
 Route::get('/refrigerator', [ 'as'=>'refrigerator', 'uses'=>'Connector@Refrigerator']);
