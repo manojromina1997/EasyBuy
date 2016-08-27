@@ -59,7 +59,7 @@ Route::get('/WatchesWomen', [ 'as'=>'watchesWomen', 'uses'=>'Connector@WatchesWo
 });
 
 Route::get('/admin', function () {
- echo 'Welcome to admin page';
+return view('admin');
 })->middleware('isAdmin');
 Auth::routes();
 
