@@ -59,9 +59,23 @@ Route::get('/personalWomen', [ 'as'=>'personalWomen', 'uses'=>'Connector@Persona
 Route::get('/WatchesWomen', [ 'as'=>'watchesWomen', 'uses'=>'Connector@WatchesWomen']);
 
 });
-
-Route::get('/admin', function () {
+Route::get('/admins', function () {
 return view('admin');
+})->middleware('isAdmin');
+Route::get('/showcomplains', function () {
+return view('admins.complaints');
+})->middleware('isAdmin');
+Route::get('/orders', function () {
+return view('admins.orders');
+})->middleware('isAdmin');
+Route::get('/addproduct', function () {
+return view('admins.newproduct');
+})->middleware('isAdmin');
+Route::get('/showproduct', function () {
+return view('admins.showproduct');
+})->middleware('isAdmin');
+Route::get('/deleteproduct', function () {
+return view('admins.deleteproduct');
 })->middleware('isAdmin');
 Auth::routes();
 

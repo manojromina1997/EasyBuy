@@ -588,6 +588,12 @@ ul.sub-menu {
   padding-left: 100px;
 }
 
+.admin-content{
+  float:right;
+}
+.admin-category{
+  float:left;
+}
 
 .pricing {
   position: absolute;
