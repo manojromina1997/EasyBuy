@@ -151,23 +151,27 @@ class Connector extends Controller
     }
         public function AccesoriesWomen()
     {
-        return view('categories.women.accesories',array('name' => 'Accesories'));
+        return view('categories.womens.accesories',array('name' => 'Accesories'));
     }
       public function ClothingWomen()
     {
-        return view('categories.women.clothing',array('name' => 'Clothing'));
+        return view('categories.womens.clothing',array('name' => 'Clothing'));
     }
       public function FootwearWomen()
     {
-        return view('categories.women.footwear',array('name' => 'Footwear'));
+        return view('categories.womens.footwear',array('name' => 'Footwear'));
     }
       public function PersonalWomen()
     {
-        return view('categories.women.personal',array('name' => 'Personal Care Appliances'));
+        return view('categories.womens.personal',array('name' => 'Personal Care Appliances'));
     }
       public function WatchesWomen()
     {
-        return view('categories.women.watches',array('name' => 'Watches'));
+        return view('categories.womens.watches',array('name' => 'Watches'));
+    }
+         public function JewelleryWomen()
+    {
+        return view('categories.womens.jewellery',array('name' => 'Jewellery'));
     }
 
 }

@@ -27,14 +27,14 @@
 <body>
     @include('includes.header')
 
-  <div class="container">
-    @yield('content')  <!--the content which will be use in different page will be coming from here-->
-        </div>
 
+    @yield('content')  <!--the content which will be use in different page will be coming from here-->
+    
     @include('includes.footer')
 
-  
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./js/jquery.js"></script>
+        <script src="./js/bootstrap.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/jquery.scrollUp.min.js"></script>
 	<script src="./js/price-range.js"></script>

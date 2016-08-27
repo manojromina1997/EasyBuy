@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@yield('image')
 
 
 	<section>
