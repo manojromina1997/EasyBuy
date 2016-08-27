@@ -18,6 +18,8 @@ Route::group(['middleware' => ['web']],function() {
 Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
 Route::get('/contact', [ 'as'=>'contact', 'uses'=>'ContactController@getContact']);
 Route::post('/contact', [ 'uses'=>'ContactController@postContact']);
+Route::get('/addproduct', [ 'as'=>'product', 'uses'=>'ProductController@getProduct'])->middleware('isAdmin');
+Route::post('/addproduct', [ 'uses'=>'ProductController@postProduct'])->middleware('isAdmin');
 Route::get('/ac', [ 'as'=>'ac', 'uses'=>'Connector@AC']);
 Route::get('/homeentertainment', [ 'as'=>'homeentertainment', 'uses'=>'Connector@HomeEntertainment']);
 Route::get('/refrigerator', [ 'as'=>'refrigerator', 'uses'=>'Connector@Refrigerator']);
@@ -68,9 +70,7 @@ return view('admins.complaints');
 Route::get('/orders', function () {
 return view('admins.orders');
 })->middleware('isAdmin');
-Route::get('/addproduct', function () {
-return view('admins.newproduct');
-})->middleware('isAdmin');
+
 Route::get('/showproduct', function () {
 return view('admins.showproduct');
 })->middleware('isAdmin');
