@@ -56,10 +56,11 @@ Route::get('jewelleryWomen', [ 'as'=>'jewelleryWomen', 'uses'=>'Connector@Jewell
 Route::get('/personalWomen', [ 'as'=>'personalWomen', 'uses'=>'Connector@PersonalWomen']);
 Route::get('/WatchesWomen', [ 'as'=>'watchesWomen', 'uses'=>'Connector@WatchesWomen']);
 
-
-
-
 });
+
+Route::get('/admin', function () {
+ echo 'Welcome to admin page';
+})->middleware('isAdmin');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
