@@ -14,10 +14,10 @@ class SearchController extends Controller
 {
     public function Search()
     {
-      $results = Product::where('category_name', 'LIKE', '%'. Input::get('searchKeyWords') .'%')
-        ->orWhere('subcategory_name', 'LIKE', '%'. Input::get('searchKeyWords') .'%')
-        ->orWhere('company_name', 'LIKE', '%'. Input::get('searchKeyWords') .'%')
-        ->orWhere('model_name', 'LIKE', '%'. Input::get('searchKeyWords') .'%')
+      $results = Product::where('category_name', 'LIKE', '%'. Input::get('search') .'%')
+        ->orWhere('subcategory_name', 'LIKE', '%'. Input::get('search') .'%')
+        ->orWhere('company_name', 'LIKE', '%'. Input::get('search') .'%')
+        ->orWhere('model_name', 'LIKE', '%'. Input::get('search') .'%')
         ->get();
     return View::make('others.search')->with('product', $results);
     }
