@@ -7,8 +7,10 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
+use App\Product;
 
 class Connector extends Controller
 {
@@ -74,24 +76,29 @@ class Connector extends Controller
     }
        public function Camera()
     {
-        return view('categories.electronics.camera',array('name' => 'Camera'));
+        $product = DB::table('product')->where('subcategory_name', 'camera')->distinct('company_name')->get();
+        return view('categories.electronics.camera',['camera' => $product]);
 
     }
     public function Mobiles()
     {
-        return view('categories.electronics.mobile',array('name' => 'Mobiles'));
+       $product = DB::table('product')->where('subcategory_name', 'mobile')->distinct('company_name')->get();
+        return view('categories.electronics.mobile',['mobile' => $product]);
     }
        public function Laptop()
     {
-        return view('categories.electronics.laptop',array('name' => 'Laptop'));
+        $product = DB::table('product')->where('subcategory_name', 'laptop')->distinct('company_name')->get();
+        return view('categories.electronics.laptop',['laptop' => $product]);
     }
        public function NetworkComponent()
     {
-        return view('categories.electronics.networkcomponent',array('name' => 'Network Component'));
+        $product = DB::table('product')->where('subcategory_name', 'networkcomponent')->distinct('company_name')->get();
+        return view('categories.electronics.networkcomponent',['network' => $product]);
     }
        public function Tablet()
     {
-        return view('categories.electronics.tablet',array('name' => 'Tablet'));
+        $product = DB::table('product')->where('subcategory_name', 'tablet')->distinct('company_name')->get();
+        return view('categories.electronics.tablet',['tablet' => $product]);
     }
        public function Dinning()
     {

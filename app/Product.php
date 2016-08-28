@@ -17,11 +17,6 @@ class Product extends Model
         'features',  
         'price', 
         'description',  
- 
-
-
-        
-         
 
  
     ];

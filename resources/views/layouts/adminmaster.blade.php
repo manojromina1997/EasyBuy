@@ -64,6 +64,9 @@
 
             <div class="menu_section">
               <ul class="nav side-menu">
+              <br>
+              <br>
+              
                   <li><a href="{{ url('/admins') }}"><i class="fa fa-home"></i> Home </a></li>
                   <li><a href="{{ url('/orders') }}"><i class="fa fa-inbox"></i>Orders</a>
                 </li>

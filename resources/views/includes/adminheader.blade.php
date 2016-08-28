@@ -12,7 +12,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/admins') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                  EasyBuy
                 </a>
             </div>

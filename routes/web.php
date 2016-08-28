@@ -64,15 +64,24 @@ Route::get('/WatchesWomen', [ 'as'=>'watchesWomen', 'uses'=>'Connector@WatchesWo
 Route::get('/admins', function () {
 return view('admin');
 })->middleware('isAdmin');
+
+use App\Contact;
 Route::get('/showcomplains', function () {
-return view('admins.complaints');
+      $contacts = Contact::all();
+
+ return view('admins.complaints', ['contact' => $contacts]);;
+
 })->middleware('isAdmin');
+
 Route::get('/orders', function () {
 return view('admins.orders');
 })->middleware('isAdmin');
 
+use App\Product;
 Route::get('/showproduct', function () {
-return view('admins.showproduct');
+     $products = Product::all();
+
+ return view('admins.showproduct', ['product' => $products]);;
 })->middleware('isAdmin');
 Route::get('/deleteproduct', function () {
 return view('admins.deleteproduct');

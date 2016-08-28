@@ -70,4 +70,6 @@ EasyBuy
 
 	</section><!--/slider-->
 
+	@include('includes.slider')
+
 @endsection
