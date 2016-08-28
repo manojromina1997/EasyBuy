@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']],function() {
 Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
+Route::post('/search', [ 'as'=>'search','uses'=>'SearchController@Search']);
 Route::get('/contact', [ 'as'=>'contact', 'uses'=>'ContactController@getContact']);
 Route::post('/contact', [ 'uses'=>'ContactController@postContact']);
 Route::get('/addproduct', [ 'as'=>'product', 'uses'=>'ProductController@getProduct'])->middleware('isAdmin');

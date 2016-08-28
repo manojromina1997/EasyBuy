@@ -24,60 +24,73 @@ class Connector extends Controller
     }
     public function AC()
     {
-        return view('categories.appliances.ac',array('name' => 'Air Conditoner'));
+         $product = DB::table('product')->where('subcategory_name', 'ac')->distinct('company_name')->get();
+        return view('categories.appliances.ac',['mobile' => $product]);
     }
      public function HomeEntertainment()
     {
-        return view('categories.appliances.homeentertainment',array('name' => 'Home Entertainment'));
+         $product = DB::table('product')->where('subcategory_name', 'homeentertainment')->distinct('company_name')->get();
+        return view('categories.appliances.homeentertainment',['mobile' => $product]);
     }
      public function Refrigerator()
     {
-        return view('categories.appliances.refrigerator',array('name' => 'Refrigerator'));
+         $product = DB::table('product')->where('subcategory_name', 'refrigerator')->distinct('company_name')->get();
+        return view('categories.appliances.refrigerator',['mobile' => $product]);
     }
      public function TV()
     {
-        return view('categories.appliances.tv',array('name' => 'Television'));
+         $product = DB::table('product')->where('subcategory_name', 'tv')->distinct('company_name')->get();
+        return view('categories.appliances.tv',['mobile' => $product]);
     }
      public function WashingMachine()
     {
-        return view('categories.appliances.washingmachine',array('name' => 'Washing Machine'));
+         $product = DB::table('product')->where('subcategory_name', 'washingmachine')->distinct('company_name')->get();
+        return view('categories.appliances.washingmachine',['mobile' => $product]);
     }
        public function Book()
     {
-        return view('categories.bookmore.book',array('name' => 'Book'));
+         $product = DB::table('product')->where('subcategory_name', 'book')->distinct('company_name')->get();
+        return view('categories.bookmore.book',['mobile' => $product]);
     }
       public function Clothing()
     {
-        return view('categories.bookmore.clothing',array('name' => 'Clothing'));
+         $product = DB::table('product')->where('subcategory_name', 'clothing')->distinct('company_name')->get();
+        return view('categories.bookmore.clothing',['mobile' => $product]);
     }
        public function Gaming()
     {
-        return view('categories.bookmore.gaming',array('name' => 'Gaming'));
+         $product = DB::table('product')->where('subcategory_name', 'gaming')->distinct('company_name')->get();
+        return view('categories.bookmore.gaming',['mobile' => $product]);
     }
        public function Fitness()
     {
-        return view('categories.bookmore.fitness',array('name' => 'Fitness'));
+         $product = DB::table('product')->where('subcategory_name', 'fitness')->distinct('company_name')->get();
+        return view('categories.bookmore.fitness',['mobile' => $product]);
     }
        public function Movies()
     {
-        return view('categories.bookmore.movies',array('name' => 'Movies'));
+         $product = DB::table('product')->where('subcategory_name', 'movies')->distinct('company_name')->get();
+        return view('categories.bookmore.movies',['mobile' => $product]);
     }
        public function Music()
     {
-        return view('categories.bookmore.music',array('name' => 'Music'));
+         $product = DB::table('product')->where('subcategory_name', 'music')->distinct('company_name')->get();
+        return view('categories.bookmore.music',['mobile' => $product]);
     }
        public function Sports()
     {
-        return view('categories.bookmore.sports',array('name' => 'Sports'));
+         $product = DB::table('product')->where('subcategory_name', 'sports')->distinct('company_name')->get();
+        return view('categories.bookmore.sports',['mobile' => $product]);
     }
        public function Stationary()
     {
-        return view('categories.bookmore.stationary',array('name' => 'Stationary'));
+         $product = DB::table('product')->where('subcategory_name', 'stationary')->distinct('company_name')->get();
+        return view('categories.bookmore.stationary',['mobile' => $product]);
     }
        public function Camera()
     {
         $product = DB::table('product')->where('subcategory_name', 'camera')->distinct('company_name')->get();
-        return view('categories.electronics.camera',['camera' => $product]);
+        return view('categories.electronics.camera',['mobile' => $product]);
 
     }
     public function Mobiles()
@@ -88,101 +101,122 @@ class Connector extends Controller
        public function Laptop()
     {
         $product = DB::table('product')->where('subcategory_name', 'laptop')->distinct('company_name')->get();
-        return view('categories.electronics.laptop',['laptop' => $product]);
+        return view('categories.electronics.laptop',['mobile' => $product]);
     }
        public function NetworkComponent()
     {
         $product = DB::table('product')->where('subcategory_name', 'networkcomponent')->distinct('company_name')->get();
-        return view('categories.electronics.networkcomponent',['network' => $product]);
+        return view('categories.electronics.networkcomponent',['mobile' => $product]);
     }
        public function Tablet()
     {
         $product = DB::table('product')->where('subcategory_name', 'tablet')->distinct('company_name')->get();
-        return view('categories.electronics.tablet',['tablet' => $product]);
+        return view('categories.electronics.tablet',['mobile' => $product]);
     }
        public function Dinning()
     {
-        return view('categories.homefurniture.dinning',array('name' => 'Dinning'));
+         $product = DB::table('product')->where('subcategory_name', 'dinning')->distinct('company_name')->get();
+        return view('categories.homefurniture.dinning',['mobile' => $product]);
     }
      public function Furniture()
     {
-        return view('categories.homefurniture.furniture',array('name' => 'Furniture'));
+         $product = DB::table('product')->where('subcategory_name', 'furniture')->distinct('company_name')->get();
+        return view('categories.homefurniture.furniture',['mobile' => $product]);
     }
      public function KitchenDinning()
     {
-        return view('categories.homefurniture.kitchendinning',array('name' => 'Kitchen & Dinning'));
+         $product = DB::table('product')->where('subcategory_name', 'kitchen')->distinct('company_name')->get();
+        return view('categories.homefurniture.kitchendinning',['mobile' => $product]);
     }
      public function KitchenStorage()
     {
-        return view('categories.homefurniture.kitchenstorage',array('name' => 'Kitchen & Storage'));
+         $product = DB::table('product')->where('subcategory_name', 'kitchenstorage')->distinct('company_name')->get();
+        return view('categories.homefurniture.kitchenstorage',['mobile' => $product]);
     }
      public function Lightning()
     {
-        return view('categories.homefurniture.lightning',array('name' => 'Lightning'));
+         $product = DB::table('product')->where('subcategory_name', 'lightning')->distinct('company_name')->get();
+        return view('categories.homefurniture.lightning',['mobile' => $product]);
     }
      public function BabyCare()
     {
-        return view('categories.kids.babycare',array('name' => 'BabyCare'));
+         $product = DB::table('product')->where('subcategory_name', 'babycare')->distinct('company_name')->get();
+        return view('categories.kids.babycare',['mobile' => $product]);
     }
        public function ClothingKids()
     {
-        return view('categories.kids.clothing',array('name' => 'Clothing'));
+         $product = DB::table('product')->where('subcategory_name', 'clothingkids')->distinct('company_name')->get();
+        return view('categories.kids.clothing',['mobile' => $product]);
     }
        public function FootwearKids()
     {
-        return view('categories.kids.footwear',array('name' => 'Footwear'));
+         $product = DB::table('product')->where('subcategory_name', 'footwearkids')->distinct('company_name')->get();
+        return view('categories.kids.footwear',['mobile' => $product]);
     }
        public function School()
     {
-        return view('categories.kids.school',array('name' => 'School'));
+         $product = DB::table('product')->where('subcategory_name', 'school')->distinct('company_name')->get();
+        return view('categories.kids.school',['mobile' => $product]);
     }
      public function Toys()
     {
-        return view('categories.kids.toys',array('name' => 'Toys'));
+         $product = DB::table('product')->where('subcategory_name', 'toys')->distinct('company_name')->get();
+        return view('categories.kids.toys',['mobile' => $product]);
     }
      public function AccesoriesMens()
     {
-        return view('categories.mens.accesories',array('name' => 'Accesories'));
+         $product = DB::table('product')->where('subcategory_name', 'accesoriesmens')->distinct('company_name')->get();
+        return view('categories.mens.accesories',['mobile' => $product]);
     }
       public function ClothingMens()
     {
-        return view('categories.mens.clothing',array('name' => 'Clothing'));
+         $product = DB::table('product')->where('subcategory_name', 'clothingmens')->distinct('company_name')->get();
+        return view('categories.mens.clothing',['mobile' => $product]);
     }
       public function FootwearMens()
     {
-        return view('categories.mens.footwear',array('name' => 'Footwear'));
+         $product = DB::table('product')->where('subcategory_name', 'footwearmens')->distinct('company_name')->get();
+        return view('categories.mens.footwear',['mobile' => $product]);
     }
       public function PersonalMens()
     {
-        return view('categories.mens.personal',array('name' => 'Personal Care Appliances'));
+         $product = DB::table('product')->where('subcategory_name', 'personalmens')->distinct('company_name')->get();
+        return view('categories.mens.personal',['mobile' => $product]);
     }
       public function WatchesMens()
     {
-        return view('categories.mens.watches',array('name' => 'Watches'));
+         $product = DB::table('product')->where('subcategory_name', 'watcheswomen')->distinct('company_name')->get();
+        return view('categories.mens.watches',['mobile' => $product]);
     }
         public function AccesoriesWomen()
     {
-        return view('categories.womens.accesories',array('name' => 'Accesories'));
+         $product = DB::table('product')->where('subcategory_name', 'accesorieswomen')->distinct('company_name')->get();
+        return view('categories.womens.accesories',['mobile' => $product]);
     }
       public function ClothingWomen()
     {
-        return view('categories.womens.clothing',array('name' => 'Clothing'));
+         $product = DB::table('product')->where('subcategory_name', 'clothingwomen')->distinct('company_name')->get();
+        return view('categories.womens.clothing',['mobile' => $product]);
     }
       public function FootwearWomen()
     {
-        return view('categories.womens.footwear',array('name' => 'Footwear'));
+         $product = DB::table('product')->where('subcategory_name', 'footwearwomen')->distinct('company_name')->get();
+        return view('categories.womens.footwear',['mobile' => $product]);
     }
       public function PersonalWomen()
     {
-        return view('categories.womens.personal',array('name' => 'Personal Care Appliances'));
+         $product = DB::table('product')->where('subcategory_name', 'personalwomen')->distinct('company_name')->get();
+        return view('categories.womens.personal',['mobile' => $product]);
     }
       public function WatchesWomen()
     {
-        return view('categories.womens.watches',array('name' => 'Watches'));
+         $product = DB::table('product')->where('subcategory_name', 'watcheswomen')->distinct('company_name')->get();
+        return view('categories.womens.watches',['mobile' => $product]);
     }
          public function JewelleryWomen()
     {
-        return view('categories.womens.jewellery',array('name' => 'Jewellery'));
+         $product = DB::table('product')->where('subcategory_name', 'jewellerywomen')->distinct('company_name')->get();
+        return view('categories.womens.jewellery',['mobile' => $product]);
     }
 
 }

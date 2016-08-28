@@ -8,7 +8,7 @@
 							<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
-                                @foreach($network as $mob)
+                                @foreach($mobile as $mob)
 									<li><a href="#">{{$mob->company_name}}</a></li>
 								@endforeach
 								</ul>
@@ -18,7 +18,7 @@
  @section('features')
  <h2>Features</h2>
  	<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                             @foreach($network as $mob)
+                             @foreach($mobile as $mob)
 					
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -36,14 +36,15 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Network Component</h2>
-                        @foreach($network as $mob)
+                        @foreach($mobile as $mob)
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 											<img src="./images/categories/{{$mob->image_url}}" />
 											<h2>Rs {{$mob->price}}</h2>
 											<p>{{$mob->company_name}} ,{{$mob->model_name}}</p>
-                                            <p>{{$mob->features}}</p>
+											<p>{{$mob->description}}</p>
+
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										
 								</div>

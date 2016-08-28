@@ -16,7 +16,7 @@ EasyBuy
               	<li data-target="#slider-carousel" data-slide-to="7"></li>
 							<li data-target="#slider-carousel" data-slide-to="8"></li>
               	<li data-target="#slider-carousel" data-slide-to="9"></li>
-							<li data-target="#slider-carousel" data-slide-to="10"></li>
+							
 						</ol>
 						
 						<div class="carousel-inner">

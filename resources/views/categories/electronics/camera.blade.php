@@ -8,7 +8,7 @@
 							<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
-                                @foreach($camera as $mob)
+                                @foreach($mobile as $mob)
 									<li><a href="#">{{$mob->company_name}}</a></li>
 								@endforeach
 								</ul>
@@ -18,7 +18,7 @@
  @section('features')
  <h2>Features</h2>
  	<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                             @foreach($camera as $mob)
+                             @foreach($mobile as $mob)
 					
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -36,7 +36,7 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Camera</h2>
-                        @foreach($camera as $mob)
+                        @foreach($mobile as $mob)
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -65,5 +65,4 @@
  @section('recommend')
  
 					
- @endsection                   
-						
+ @endsection                

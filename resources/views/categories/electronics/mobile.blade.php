@@ -43,7 +43,8 @@
 											<img src="./images/categories/{{$mob->image_url}}" />
 											<h2>Rs {{$mob->price}}</h2>
 											<p>{{$mob->company_name}} ,{{$mob->model_name}}</p>
-                                            <p>{{$mob->features}}</p>
+											<p>{{$mob->description}}</p>
+
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										
 								</div>

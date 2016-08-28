@@ -1,7 +1,7 @@
 @extends('layouts.categorymaster')
-@section('title', 'JewelleryWomen')
+@section('title', 'Kitchen & Storage')
 @section('image')
-<img src="./images/offers/wj.jpg" width="100%" height="60%"/>
+<img src="./images/offers/kst.jpg" width="100%" height="60%"/>
 @endsection
 @section('brands')
 			<div class="brands_products"><!--brands_products-->
@@ -35,7 +35,7 @@
   @section('products')
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Jewellery</h2>
+						<h2 class="title text-center">Kitchen Storage</h2>
                         @foreach($mobile as $mob)
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -68,3 +68,5 @@
 					
  @endsection                   
 						
+
+
