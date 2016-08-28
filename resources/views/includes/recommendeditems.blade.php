@@ -142,8 +142,8 @@
                                 <div class="info">
                                     <div class="row">
                                         <div class="price col-md-6">
-                                            <h5>
-                                                Puma Sneakers</h5>
+                                            <h5> Puma Lazy Slip On II DP Sneakers</h5>
+
                                             <h5 class="price-text-color">
                                                 1399</h5>
                                         </div>
@@ -171,7 +171,7 @@
                                     <div class="row">
                                         <div class="price col-md-6">
                                             <h5>
-                                             LG LSA3NP3A</h5>
+                                            LG 1 Ton 3 Star Split AC White</h5>
                                             <h5 class="price-text-color">
                                              21999</h5>
                                         </div>
@@ -198,7 +198,7 @@
                                     <div class="row">
                                         <div class="price col-md-6">
                                             <h5>
-                                               Sony Bravia</h5>
+                                             Sony Bravia KDL-40W700C 101.6 cm (40) </h5>
                                             <h5 class="price-text-color">
                                                49980</h5>
                                         </div>

@@ -16,7 +16,7 @@
 				</div>
 				
 @yield('products')
-@include('includes.slider')
+@include('includes.recommendeditems')
 					
 					
 					
