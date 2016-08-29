@@ -258,17 +258,18 @@ a#scrollUp i{
   padding:7px;
   border:1px solid #333;
   margin-left:-25%;
-  font-size:"15px";
+
 }
 #submit{
   padding:7px;
   font-size:15px;
-  background:#607d8b;
-  border:1px solid #607d8b;
+  background:#0B87EE;
+  border:1px solid #0B87EE;
   color:white;
    height: 50px;
    margin-left:-5px;
    width:100px;
+
 }
 .search_box input {
   background:#fff;
@@ -282,8 +283,7 @@ a#scrollUp i{
   outline: medium none;
   padding-left: 10px;
   width: 90%;
-  background-repeat: no-repeat;
-  background-position: 95%;
+
  margin-left:-10%;
  
 

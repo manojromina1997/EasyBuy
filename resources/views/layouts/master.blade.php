@@ -29,6 +29,7 @@
     @include('includes.header')
 
 
+    
     @yield('content')  <!--the content which will be use in different page will be coming from here-->
     
     @include('includes.footer')

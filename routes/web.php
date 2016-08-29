@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']],function() {
 Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
+Route::get('/cart', [ 'as'=>'cart', 'uses'=>'Connector@Cart']);
+Route::get('/account', [ 'as'=>'account', 'uses'=>'Connector@Account']);
+Route::get('/wishlist', [ 'as'=>'home', 'uses'=>'Connector@Wishlist']);
 Route::post('/search', [ 'as'=>'search','uses'=>'SearchController@Search']);
 Route::get('/contact', [ 'as'=>'contact', 'uses'=>'ContactController@getContact']);
 Route::post('/contact', [ 'uses'=>'ContactController@postContact']);

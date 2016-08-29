@@ -18,6 +18,19 @@ class Connector extends Controller
     {
         return view('index');
     }
+        public function Cart()
+    {
+        return view('others.cart');
+    }
+        public function Wishlist()
+    {
+        return view('others.wishlist');
+    }
+        public function Account()
+    {
+        return view('others.account');
+    }
+
      public function Contact()
     {
         return view('others.contact');

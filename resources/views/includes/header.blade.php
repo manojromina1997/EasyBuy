@@ -15,14 +15,14 @@
 							<ul class="nav navbar-nav">
 								@if (Auth::guest())
 								<li><a href="{{url('/forums')}}"><i class="fa fa-crosshairs"></i> Forum</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{url('/wishlist')}}"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ url('/login') }}"><i class="fa fa-lock"></i> Login</a></li>
                                 @else
 								<li><a href="{{url('/forums')}}"><i class="fa fa-crosshairs"></i> Forum</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="#"><i class="fa fa-user"></i>  Account</a></li>
+								<li><a href="{{url('/wishlist')}}"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{url('/account')}}"><i class="fa fa-user"></i>  Account</a></li>
 						    <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -65,7 +65,7 @@
 					
 					<div class="col-sm-8">
 							<form action="{{route('search')}}" method="post">
-						<input type="text" placeholder="Search " name="search" id="search"/>
+						<input type="text" placeholder="Search for Brand , Products" name="search" id="search"/>
 						<input type="submit" value="Search" id="submit" > 
 						{{csrf_field()}}
 							</form>
